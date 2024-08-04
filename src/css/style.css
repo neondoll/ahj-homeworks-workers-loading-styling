@@ -1,0 +1,97 @@
+@import "_normalize.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body { font-family: "Roboto", sans-serif; color: #464646; background-color: plum; }
+
+#app { width: 100%; max-width: 526px; height: 100vh; margin: 0 auto; padding: 72px 48px; }
+
+.widget {
+    position: relative;
+    z-index: 0;
+    background-color: #ffffff;
+    border-radius: 15px;
+    border: 1px solid #464646;
+}
+
+.widget--invalid::after {
+    content: "Не удалось загрузить данные\000AПроверьте подключение\000Aи обновите страницу";
+    position: absolute;
+    inset: 1px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    line-height: 29px;
+    text-align: center;
+    white-space: pre;
+    color: #737373;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+}
+
+.widget__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 13px 25px 0 11px;
+}
+
+.widget__title { margin-top: 5px; font-size: 22px; font-weight: 400; line-height: 1; }
+
+.widget__btn-update {
+    font-size: 18px;
+    line-height: 1;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.widget__body { padding: 38px 17px 42px 9px; }
+
+.widget__body > * + * { margin-top: 23.5px; }
+
+.widget__item {}
+
+.widget-item {}
+
+.widget-item--loading {}
+
+.widget-item__title { display: block; font-size: 14px; font-weight: 400; line-height: 1; }
+
+.widget-item__title--loading { width: 157px; height: 1em; background-color: #a8a8a8; }
+
+.widget-item__description { display: flex; column-gap: 16px; width: 100%; margin-top: 10px; }
+
+.widget-item__description--loading {}
+
+.widget-item__image { display: block; flex-shrink: 0; width: 46px; height: 42px; }
+
+.widget-item__image:not(.widget-item__image--loading) {
+    object-fit: cover;
+    object-position: center;
+}
+
+.widget-item__image--loading { background-color: #a8a8a8; }
+
+.widget-item__text { display: block; width: 100%; font-size: 16px; line-height: 24px; }
+
+.widget-item__text:not(.widget-item__text--loading) {
+    display: -webkit-box;
+    margin: -4px 0;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.widget-item__text--loading {}
+
+.widget-item__text--loading::before,
+.widget-item__text--loading::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1em;
+    background-color: #a8a8a8;
+}
+
+.widget-item__text--loading::after { margin-top: 8px; }
