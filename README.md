@@ -2,6 +2,8 @@
 
 [![Build status](https://ci.appveyor.com/api/projects/status/qc99ufpmycbk92m2?svg=true)](https://ci.appveyor.com/project/neondoll/ahj-homeworks-workers-loading-styling)
 
+[https://neondoll.github.io/ahj-homeworks-workers-loading-styling](https://neondoll.github.io/ahj-homeworks-workers-loading-styling)
+
 ## Описание
 
 [Домашнее задание к занятию "12. WebWorkers, ServiceWorkers"](https://github.com/netology-code/ahj-homeworks/tree/AHJ-50/workers#loading-styling)
