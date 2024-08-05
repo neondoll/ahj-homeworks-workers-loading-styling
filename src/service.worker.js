@@ -31,8 +31,7 @@ if (workbox) {
 
     try {
       response = await fetch(event.request);
-    }
-    catch (error) {
+    } catch (error) {
       console.log(error);
 
       return;
@@ -48,8 +47,7 @@ if (workbox) {
 
     try {
       response = await fetch(event.request);
-    }
-    catch (error) {
+    } catch (error) {
       console.log(error);
 
       const cacheResponse = await caches.match(event.request);
@@ -81,7 +79,7 @@ if (workbox) {
 
     const url = new URL(event.request.url);
 
-    if (url.pathname.startsWith('/api')) {
+    if (url.pathname.startsWith('/api') || ['chrome-extension:', 'ws:'].includes(url.protocol)) {
       return;
     }
 
