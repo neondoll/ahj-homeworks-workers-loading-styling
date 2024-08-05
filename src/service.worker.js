@@ -31,7 +31,8 @@ if (workbox) {
 
     try {
       response = await fetch(event.request);
-    } catch (error) {
+    }
+    catch (error) {
       console.log(error);
 
       return;
@@ -47,7 +48,8 @@ if (workbox) {
 
     try {
       response = await fetch(event.request);
-    } catch (error) {
+    }
+    catch (error) {
       console.log(error);
 
       const cacheResponse = await caches.match(event.request);
